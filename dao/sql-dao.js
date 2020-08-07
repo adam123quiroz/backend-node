@@ -1,56 +1,49 @@
-const { Connection, Request } = require('tedious');
-const configDB = require('../config');
+const Connection = require('tedious').Connection;
+const configSql = require("../config");
 
-// Create connection to database
 const config = {
-    server: configDB.mysql.host, // update me
+    server: configSql.mysql.host,  //update me
     authentication: {
+        type: 'default',
         options: {
-            userName: configDB.mysql.user, // update me
-            password: configDB.mysql.password // update me
-        },
-        type: "default"
+            userName: configSql.mysql.user, //update me
+            password: configSql.mysql.password  //update me
+        }
     },
     options: {
-        database: configDB.mysql.database, //update me
-        encrypt: true
+        // If you are on Microsoft Azure, you need encryption:
+        encrypt: true,
+        database: configSql.mysql.password  //update me
     }
 };
-
 const connection = new Connection(config);
-
-// Attempt to connect and execute queries if connection goes through
-connection.on("connect", err => {
-    if (err) {
-        console.error(err.message);
-    } else {
-        // queryDatabase();
-    }
+connection.on('connect', err => {
+    // If no error, then good to proceed.
+    console.log("Connected");
+    executeStatement1();
 });
 
-function queryDatabase() {
-    console.log("Reading rows from the Table...");
+const Request = require('tedious').Request
+const TYPES = require('tedious').TYPES;
 
-    // Read all rows from table
-    const request = new Request(
-        `SELECT TOP 20 pc.Name as CategoryName,
-                   p.name as ProductName
-     FROM [SalesLT].[ProductCategory] pc
-     JOIN [SalesLT].[Product] p ON pc.productcategoryid = p.productcategoryid`,
-        (err, rowCount) => {
-            if (err) {
-                console.error(err.message);
+function executeStatement1() {
+    let request = new Request("INSERT SalesLT.Product (Name, ProductNumber, StandardCost, ListPrice, SellStartDate)" +
+        " OUTPUT INSERTED.ProductID VALUES (@Name, @Number, @Cost, @Price, CURRENT_TIMESTAMP);", function(err) {
+        if (err) {
+            console.log(err);}
+    });
+    request.addParameter('Name', TYPES.NVarChar,'SQL Server Express 2014');
+    request.addParameter('Number', TYPES.NVarChar , 'SQLEXPRESS2014');
+    request.addParameter('Cost', TYPES.Int, 11);
+    request.addParameter('Price', TYPES.Int,11);
+    request.on('row', function(columns) {
+        columns.forEach(function(column) {
+            if (column.value === null) {
+                console.log('NULL');
             } else {
-                console.log(`${rowCount} row(s) returned`);
+                console.log("Product id of inserted item is " + column.value);
             }
-        }
-    );
-
-    request.on("row", columns => {
-        columns.forEach(column => {
-            console.log("%s\t%s", column.metadata.colName, column.value);
         });
     });
-
     connection.execSql(request);
 }
