@@ -10,15 +10,12 @@ module.exports = injectedStore => {
 
     async function login(username, password) {
         const data = await dao.query(TABLE, {username: username});
-        console.log(data);
         return bcrypt.compare(password, data.password)
             .then(value => {
                 if (value === true) {
-                    //TODO: generate token
                     return auth.sign(data);
-                } else {
-                    throw new Error('Data invalid')
                 }
+                throw new Error('Data invalid')
             })
     }
 
@@ -32,7 +29,6 @@ module.exports = injectedStore => {
         if (data.password) {
             authData.password = await bcrypt.hash(data.password, 5);
         }
-        // console.log(authData);
         return dao.upsert(TABLE, authData);
     }
 

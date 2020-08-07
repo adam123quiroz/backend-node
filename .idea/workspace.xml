@@ -5,9 +5,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24cd2d85-d532-4074-afc7-d39da7743eab" name="Default Changelist" comment="">
+    <list default="true" id="24cd2d85-d532-4074-afc7-d39da7743eab" name="Default Changelist" comment="add bcrypt to security password">
+      <change afterPath="$PROJECT_DIR$/api/components/user/secure.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dao/sql-dao.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/network/erros.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/utils/error.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/components/auth/controller-auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/components/auth/controller-auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/components/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/components/auth/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/api/components/auth/service-auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/components/auth/service-auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/components/user/controller-user.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/components/user/controller-user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/components/user/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/components/user/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/auth/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
@@ -41,26 +52,36 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="ChangesTree.GroupingKeys" value="directory" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="12.16.1" />
     <property name="javascript.nodejs.core.library.typings.version" value="12.12.53" />
     <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
+    <property name="node.js.selected.package.stylelint" value="" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_interpreter_path" value="node" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="settings.nodejs" />
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Node.js.sql-dao.js">
     <configuration name="index.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/api/index.js" working-dir="$PROJECT_DIR$/api">
+      <method v="2" />
+    </configuration>
+    <configuration name="sql-dao.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="$PROJECT_DIR$/dao/sql-dao.js" working-dir="$PROJECT_DIR$/dao">
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Node.js.sql-dao.js" />
         <item itemvalue="Node.js.index.js" />
       </list>
     </recent_temporary>
@@ -75,8 +96,20 @@
       <updated>1596457554564</updated>
       <workItem from="1596457556690" duration="2021000" />
       <workItem from="1596459916036" duration="21420000" />
-      <workItem from="1596514482270" duration="2632000" />
+      <workItem from="1596514482270" duration="12276000" />
+      <workItem from="1596598600904" duration="7168000" />
+      <workItem from="1596689927844" duration="31000" />
+      <workItem from="1596689990345" duration="14594000" />
+      <workItem from="1596773453405" duration="1546000" />
     </task>
+    <task id="LOCAL-00001" summary="add bcrypt to security password">
+      <created>1596517278048</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1596517278048</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -106,8 +139,25 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add bcrypt to security password" />
+    <option name="LAST_COMMIT_MESSAGE" value="add bcrypt to security password" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="348" y="40" key="#JSHint" timestamp="1596545336727">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="348" y="40" key="#JSHint/0.0.1536.824@0.0.1536.824" timestamp="1596545336727" />
+    <state x="495" y="303" key="#Usage_Scope" timestamp="1596740342673">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="495" y="303" key="#Usage_Scope/0.0.1536.824@0.0.1536.824" timestamp="1596740342673" />
+    <state x="516" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1596726421447">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="516" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1536.824@0.0.1536.824" timestamp="1596726421447" />
     <state x="548" y="153" key="FileChooserDialogImpl" timestamp="1596458879418">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -120,29 +170,37 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="555" y="108" key="Github.UntrackedFilesDialog/0.0.1536.824@0.0.1536.824" timestamp="1596516159182" />
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1596459578644">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1596774713266">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596459578644" />
-    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1596459578644">
+    <state width="1515" height="210" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1596774713266" />
+    <state width="1515" height="210" key="GridCell.Tab.0.center" timestamp="1596774713266">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596459578644" />
-    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1596459578644">
+    <state width="1515" height="210" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1596774713266" />
+    <state width="1515" height="210" key="GridCell.Tab.0.left" timestamp="1596774713265">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596459578644" />
-    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1596459578644">
+    <state width="1515" height="210" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1596774713265" />
+    <state width="1515" height="210" key="GridCell.Tab.0.right" timestamp="1596774713266">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596459578644" />
-    <state x="277" y="57" key="SettingsEditor" timestamp="1596516314439">
+    <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1596774713266" />
+    <state x="190" y="81" key="SettingsEditor" timestamp="1596740372061">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="277" y="57" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596516314439" />
-    <state x="425" y="187" key="run.anything.popup" timestamp="1596479645227">
+    <state x="190" y="81" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1596740372061" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1596517290705">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1596479645227" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1596517290705" />
+    <state width="600" height="428" key="javadoc.popup" timestamp="1596739631698">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="600" height="428" key="javadoc.popup/0.0.1536.824@0.0.1536.824" timestamp="1596739631698" />
+    <state x="425" y="187" key="run.anything.popup" timestamp="1596599430263">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="425" y="187" key="run.anything.popup/0.0.1536.824@0.0.1536.824" timestamp="1596599430263" />
   </component>
 </project>
