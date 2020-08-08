@@ -1,11 +1,11 @@
-const TABLE = 'user';
+const TABLE = 'nb_person';
 const auth = require('../auth');
 const { nanoid } = require('nanoid');
 
 module.exports = injectedStore => {
     let dao = injectedStore;
     if (!dao) {
-        dao = require("../../../dao/dummy");
+        dao = require("../../../dao/sql-dao");
     }
 
     function list() {
