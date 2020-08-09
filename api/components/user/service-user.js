@@ -1,4 +1,4 @@
-const TABLE = 'nb_person';
+const TABLE = 'nb_user';
 const auth = require('../auth');
 const { nanoid } = require('nanoid');
 

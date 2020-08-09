@@ -5,7 +5,7 @@ const TABLE = 'auth';
 module.exports = injectedStore => {
     let dao = injectedStore;
     if (!dao) {
-        dao = require("../../../dao/dummy");
+        dao = require("../../../dao/sql-dao");
     }
 
     async function login(username, password) {
@@ -16,7 +16,7 @@ module.exports = injectedStore => {
                     return auth.sign(data);
                 }
                 throw new Error('Data invalid')
-            })
+            });
     }
 
     async function upsert(data) {
